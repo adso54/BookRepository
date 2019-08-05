@@ -10,11 +10,14 @@ const bookRoutes = require("./routes/books");
 app.use("/", bookRoutes);
 
 
+// APP LISTENING CONFIG
+const IP    = process.env.IP,
+      PORT  = process.env.PORT || 3000;
 
-app.listen(3000, (err)=>{
+app.listen(PORT, IP, (err)=>{
     if(err){
         console.log(err.message);
     }else{
-        console.log("Listen on port 3000");
+        console.log("Application working!");
     }
 })
