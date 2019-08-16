@@ -1,9 +1,8 @@
 const express = require("express"),
       router  = express.Router({mergeParams: true});
 
-
-router.get("/index", (req, res)=>{
-    res.send("Working!");
+router.get("/", (req, res) => {
+    res.redirect("/books/index")
 })
 
-module.exports = router; 
+module.exports = router;
